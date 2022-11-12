@@ -13,7 +13,12 @@
     "url": "https://github.com/DimplesY/util"
   },
   "bugs": "https://github.com/DimplesY/util/issues",
-  "keywords": [],
+  "keywords": [
+    "dimplesyj",
+    "util",
+    "utils",
+    "工具包"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {

@@ -5,7 +5,7 @@ export enum FormatType {
   toHour = 'YYYY-MM-DD HH',
   toDay = 'YYYY-MM-DD',
   toMonth = 'YYYY-MM',
-  year = 'YYYY',
+  toYear = 'YYYY',
   toSecond = 'YYYY-MM-DD HH:mm:ss',
 }
 
