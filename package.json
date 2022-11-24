@@ -1,7 +1,7 @@
 {
   "name": "@dimplesyj/util",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@7.9.5",
   "description": "",
   "author": "Dimples YJ <dimplesyj@gmail.com>",
@@ -48,7 +48,7 @@
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
-    "test": "vitest -w",
+    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
