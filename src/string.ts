@@ -18,7 +18,8 @@ export const camelize = (str: string): string => {
  * some-mixed_string with spaces_underscores-and-hyphens => SomeMixedStringWithSpacesUnderscoresAndHyphens
  */
 export const toPascalCase = (str: string): string => {
-  return str.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
+  return str
+    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
     .map(x => x.charAt(0).toUpperCase() + x.slice(1).toLowerCase())
     .join('')
 }
@@ -34,9 +35,7 @@ export const toCamelCase = (str: string) => {
   const s
     = str
     && str
-      .match(
-        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g,
-      )!
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
       .map(x => x.slice(0, 1).toUpperCase() + x.slice(1).toLowerCase())
       .join('')
   return s.slice(0, 1).toLowerCase() + s.slice(1)
@@ -82,8 +81,7 @@ export const toCharArray = (s: string) => [...s]
  * @param str - 字符串
  * @example userInfo => UserInfo
  */
-export const capitalize
-  = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
+export const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
 
 const hyphenateRE = /\B([A-Z])/g
 /**
@@ -91,8 +89,7 @@ const hyphenateRE = /\B([A-Z])/g
  * @param str - 字符串
  * @example UserInfo => user-info
  */
-export const hyphenate = (str: string) =>
-  str.replace(hyphenateRE, '-$1').toLowerCase()
+export const hyphenate = (str: string) => str.replace(hyphenateRE, '-$1').toLowerCase()
 
 /**
  * 替换所有相同字符串
@@ -105,7 +102,7 @@ export function replaceAll(text: string, repstr: string, newstr: string) {
 }
 
 /**
- * @desc 去左右空格
+ * 去左右空格
  * @param value - 需要处理的字符串
  */
 export function trim(value: string) {
@@ -113,7 +110,7 @@ export function trim(value: string) {
 }
 
 /**
- * @desc 去所有空格
+ * 去所有空格
  * @param value - 需要处理的字符串
  */
 export function trimAll(value: string) {
