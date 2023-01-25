@@ -9,11 +9,9 @@ export function compareVersion(v1: string, v2: string): number {
   const v2Arr = v2.split('.')
   const len = Math.max(v1Arr.length, v2Arr.length)
 
-  while (v1Arr.length < len)
-    v1Arr.push('0')
+  while (v1Arr.length < len) v1Arr.push('0')
 
-  while (v2Arr.length < len)
-    v2Arr.push('0')
+  while (v2Arr.length < len) v2Arr.push('0')
 
   for (let i = 0; i < len; i++) {
     const num1 = +v1Arr[i]
@@ -21,11 +19,9 @@ export function compareVersion(v1: string, v2: string): number {
 
     if (num1 > num2)
       return 1
-
     else if (num1 < num2)
       return -1
   }
 
   return 0
 }
-
