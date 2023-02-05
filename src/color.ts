@@ -2,15 +2,19 @@ import { isString } from '.'
 
 /**
  * rgb转hex
- * @param r - 红色
- * @param g - 绿色
- * @param b - 蓝色
- * @returns
+ *
+ * @category Color
+ *
  */
 export function rgbToHex(r: string | number, g: string | number, b: string | number) {
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`
 }
 
+/**
+ * 数字转16进制
+ *
+ * @category Color
+ */
 export function toHex(n: string | number) {
   if (isString(n))
     n = parseInt(n, 10)
@@ -23,7 +27,8 @@ export function toHex(n: string | number) {
 
 /**
  * 十六进制颜色转RGB颜色
- * @param hex 颜色值 #333 或 #333333
+ *
+ * @category Color
  */
 export function hexToRGB(hex: string) {
   if (hex.length === 4) {
