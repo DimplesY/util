@@ -8,23 +8,27 @@ importers:
       '@antfu/ni': ^0.19.0
       '@antfu/utils': ^0.7.2
       '@types/node': ^18.7.5
+      '@types/throttle-debounce': ^5.0.0
       bumpp: ^8.2.1
       dayjs: ^1.11.5
       eslint: ^8.22.0
       esno: ^0.16.3
       pnpm: ^7.9.5
       rimraf: ^4.1.2
+      throttle-debounce: ^5.0.0
       typescript: ^4.7.4
       unbuild: ^1.0.2
       vite: ^4.0.4
       vitest: ^0.28.1
     dependencies:
       dayjs: 1.11.5
+      throttle-debounce: 5.0.0
     devDependencies:
       '@antfu/eslint-config': 0.34.1_4rv7y5c6xz3vfxwhbrcxxi73bq
       '@antfu/ni': 0.19.0
       '@antfu/utils': 0.7.2
       '@types/node': 18.7.5
+      '@types/throttle-debounce': 5.0.0
       bumpp: 8.2.1
       eslint: 8.22.0
       esno: 0.16.3
@@ -831,6 +835,10 @@ packages:
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+    dev: true
+
+  /@types/throttle-debounce/5.0.0:
+    resolution: {integrity: sha512-Pb7k35iCGFcGPECoNE4DYp3Oyf2xcTd3FbFQxXUI9hEYKUl6YX+KLf7HrBmgVcD05nl50LIH6i+80js4iYmWbw==}
     dev: true
 
   /@types/unist/2.0.6:
@@ -3756,6 +3764,11 @@ packages:
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
+
+  /throttle-debounce/5.0.0:
+    resolution: {integrity: sha512-2iQTSgkkc1Zyk0MeVrt/3BvuOXYPl/R8Z0U2xxo9rjwNciaHDG3R+Lm6dh4EeUci49DanvBnuqI6jshoQQRGEg==}
+    engines: {node: '>=12.22'}
+    dev: false
 
   /tinybench/2.3.1:
     resolution: {integrity: sha512-hGYWYBMPr7p4g5IarQE7XhlyWveh1EKhy4wUBS1LrHXCKYgvz+4/jCqgmJqZxxldesn05vccrtME2RLLZNW7iA==}
