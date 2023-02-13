@@ -1,5 +1,7 @@
 const camelizeRE = /-(\w)/g
 /**
+ * @category String
+ *
  * 驼峰化
  * @param str - 字符串
  * @example user-info => userInfo
@@ -9,13 +11,15 @@ export const camelize = (str: string): string => {
 }
 
 /**
+ * @category String
+ *
  * 将字符串转换为 pascal
+ *
  * @param str - 字符串
- * @example
- * user-info => UserInfo
- * some_database_field_name => SomeDatabaseFieldName
- * Some label that needs to be pascalized => SomeLabelThatNeedsToBePascalized
- * some-mixed_string with spaces_underscores-and-hyphens => SomeMixedStringWithSpacesUnderscoresAndHyphens
+ * @example user-info => UserInfo
+ * @example some_database_field_name => SomeDatabaseFieldName
+ * @example Some label that needs to be pascalized => SomeLabelThatNeedsToBePascalized
+ * @example some-mixed_string with spaces_underscores-and-hyphens => SomeMixedStringWithSpacesUnderscoresAndHyphens
  */
 export const toPascalCase = (str: string): string => {
   return str
@@ -25,6 +29,8 @@ export const toPascalCase = (str: string): string => {
 }
 
 /**
+ * @category String
+ *
  * 将字符串转换为 camel
  * @param str
  * @example hello-world => helloWorld
@@ -42,8 +48,11 @@ export const toCamelCase = (str: string) => {
 }
 
 /**
+ * @category String
  * 将字符串转换为 kebab
+ *
  * @param str
+ *
  * @example helloWorld => hello-world
  * @example hello_world => hello-world
  * @example hello world => hello-world
@@ -56,8 +65,12 @@ export const toKebabCase = (str: string) =>
     .join('-')
 
 /**
+ * @category String
+ *
  * 将字符串转换为 snake
+ *
  * @param str
+ *
  * @example helloWorld => hello_world
  * @example hello_world => hello_world
  * @example hello world => hello_world
@@ -70,14 +83,20 @@ export const toSnakeCase = (str: string) =>
     .join('_')
 
 /**
+ * @category String
+ *
  * 字符数组
+ *
  * @param s
  * @example hello => ['h', 'e', 'l', 'l', 'o']
  */
 export const toCharArray = (s: string) => [...s]
 
 /**
+ * @category String
+ *
  * 首字母大写
+ *
  * @param str - 字符串
  * @example userInfo => UserInfo
  */
@@ -85,14 +104,20 @@ export const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.sli
 
 const hyphenateRE = /\B([A-Z])/g
 /**
+ * @category String
+ *
  * 大写字母 转为 小写-连接
+ *
  * @param str - 字符串
  * @example UserInfo => user-info
  */
 export const hyphenate = (str: string) => str.replace(hyphenateRE, '-$1').toLowerCase()
 
 /**
+ * @category String
+ *
  * 替换所有相同字符串
+ *
  * @param text - 需要处理的字符串
  * @param repstr - 被替换的字符
  * @param newstr - 替换后的字符
@@ -102,6 +127,8 @@ export function replaceAll(text: string, repstr: string, newstr: string) {
 }
 
 /**
+ * @category String
+ *
  * 去左右空格
  * @param value - 需要处理的字符串
  */
@@ -110,6 +137,8 @@ export function trim(value: string) {
 }
 
 /**
+ * @category String
+ *
  * 去所有空格
  * @param value - 需要处理的字符串
  */
@@ -118,6 +147,8 @@ export function trimAll(value: string) {
 }
 
 /**
+ * @category String
+ *
  * 根据数字获取对应的汉字
  * @param num - 数字(0-10)
  */
@@ -127,6 +158,8 @@ export function getHanByNumber(num: number) {
 }
 
 /**
+ * @category String
+ *
  * 插入字符串
  * @param str - 原字符串
  * @param start - 插入位置
@@ -137,6 +170,8 @@ export function insertStr(str: string, start: number, insertStr: string): string
 }
 
 /**
+ * @category String
+ *
  * 转义HTML字符
  * @param str - 字符串
  * @example '<a href="#">Me & you</a>' => '&lt;a href="#"&gt;Me &amp; you&lt;/a&gt;'
@@ -156,6 +191,8 @@ export function escapeHTML(str: string) {
 }
 
 /**
+ * @category String
+ *
  * 移除空格
  * @param str - 字符串
  * @example '  Hello  \nWorld  ' => 'Hello World'

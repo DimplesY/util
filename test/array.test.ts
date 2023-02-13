@@ -34,4 +34,3 @@ describe('array', () => {
     expect(allEqual(arr2)).toBe(false)
   })
 })
-

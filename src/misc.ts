@@ -1,4 +1,6 @@
 /**
+ * @category Misc
+ *
  * 执行数组里的函数
  */
 export const invokeArrayFns = (fns: Function[], arg?: any) => {
@@ -7,9 +9,9 @@ export const invokeArrayFns = (fns: Function[], arg?: any) => {
 }
 
 /**
- * Nano version of string hash
- * @param str - 字符串
- * @returns foo => 193420387
+ * @category Misc
+ *
+ * 字符串哈希
  */
 export const stringHash = (str: string): number => {
   let hash = 5381
@@ -20,6 +22,8 @@ export const stringHash = (str: string): number => {
 }
 
 /**
+ * @category Misc
+ *
  * uuid
  */
 export const uuid = (): string => {
@@ -34,9 +38,9 @@ export const uuid = (): string => {
 const urlAlphabet = 'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict'
 
 /**
+ * @category Misc
+ *
  * nanoid
- * @param alphabet - 字符串
- * @param defaultSize - 长度
  */
 export const nanoid = (defaultSize = 21, alphabet = urlAlphabet) => {
   let id = ''
@@ -50,18 +54,18 @@ export const nanoid = (defaultSize = 21, alphabet = urlAlphabet) => {
 }
 
 /**
+ * @category Misc
+ *
  * 手机号码中间4位隐藏星号
- * @param mobile - 手机号
- * @returns 138****8888
  */
 export function hideMobile(mobile: string) {
   return mobile.replace(/^(\d{3})\d{4}(\d{4})$/, '$1****$2')
 }
 
 /**
+ * @category Misc
+ *
  * 键值对拼接成URL参数
- * @param obj - 键值对
- * @returns a=1&b=2
  */
 export const params2Url = (obj: Object) => {
   const params = []
@@ -72,8 +76,9 @@ export const params2Url = (obj: Object) => {
 }
 
 /**
+ * @category Misc
+ *
  * 将总秒数转换成 时:分:秒
- * @param seconds - 秒
  */
 export const seconds2Time = (seconds: number) => {
   const hour = Math.floor(seconds / 3600)
@@ -83,8 +88,9 @@ export const seconds2Time = (seconds: number) => {
 }
 
 /**
+ * @category Misc
+ *
  * 将总秒数转换成 日:时:分:秒
- * @param seconds - 秒
  */
 export const seconds2DayTime = (seconds: number) => {
   const day = Math.floor(seconds / 86400)
@@ -95,8 +101,9 @@ export const seconds2DayTime = (seconds: number) => {
 }
 
 /**
+ * @category Misc
+ *
  * 填充0
- * @param num - 数字
  */
 function fillZero(num: number) {
   /**
@@ -112,9 +119,10 @@ function fillZero(num: number) {
 }
 
 /**
+ * @category Misc
+ *
  * 下载文件
- * @param link - 文件链接
- * @param name - 文件名
+ *
  * @example downloadFile('http://www.baidu.com/img/bd_logo1.png', 'logo.png')
  */
 export function download(link: string, name?: string) {
@@ -131,9 +139,10 @@ export function download(link: string, name?: string) {
 }
 
 /**
+ * @category Misc
+ *
  * 浏览器下载静态文件
- * @param name - 文件名
- * @param content - 文件内容 blob
+ *
  * @example downloadFile('1.json',JSON.stringify({name:'hahahha'}))
  * @example downloadFile('1.json',new Blob([ data ]))
  */

@@ -1,4 +1,6 @@
 /**
+ * @category Version
+ *
  * 对比 version 的版本号
  * @param v1 - 版本号1
  * @param v2 - 版本号2

@@ -29,6 +29,8 @@ export const insertAt = <T>(arr: T[], index: number, ...v: T[]) => {
 /**
  * 返回数组中的最后一个元素
  *
+ * @category Array
+ *
  * @example
  * ```
  * last([1, 2, 3]); // 3
@@ -42,12 +44,16 @@ export const last = <T>(arr: T[]) => (arr && arr.length ? arr[arr.length - 1] : 
 /**
  * 返回数组中的最后 n 个元素
  *
+ * @category Array
+ *
  * @example lastN(['a', 'b', 'c', 'd'], 2); // ['c', 'd']
  */
 export const lastN = <T>(arr: T[], n: number) => arr.slice(-n)
 
 /**
  * 布尔全等判断
+ *
+ * @category Array
  *
  * @example all([4, 2, 3], x => x > 1) => true
  */
@@ -57,6 +63,8 @@ export function all(arr: unknown[], fn = Boolean) {
 
 /**
  * 检查数组各项相等
+ *
+ * @category Array
  *
  * @example
  * ```

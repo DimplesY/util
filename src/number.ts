@@ -1,7 +1,7 @@
 /**
+ * @category Number
+ *
  * 转为数字
- * @param val - 值
- * @returns
  */
 export const toNumber = (val: any): any => {
   const n = parseFloat(val)
@@ -9,9 +9,9 @@ export const toNumber = (val: any): any => {
 }
 
 /**
+ * @category Number
  * 保留小数点后面n位数字,四舍五入
- * @param {string} value
- * @param {number} n
+ *
  * @returns {string}
  */
 export const toFix = (value: string, n: number): string => {

@@ -1,6 +1,8 @@
 import type { Fn } from './types'
 
 /**
+ * @category Promise
+ *
  * 睡眠
  * @param ms - 毫秒数
  * @param callback - 回调函数

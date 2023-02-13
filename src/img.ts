@@ -17,7 +17,9 @@ interface IImageVerifyOptions {
 
 /**
  * 绘制图形验证码
- * @returns 随机验证码
+ *
+ * @category Image
+ *
  */
 export function drawImageVerify({ dom, width = 152, height = 40 }: IImageVerifyOptions) {
   let imgCode = ''
