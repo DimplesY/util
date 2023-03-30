@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
-    "@antfu/ni": "^0.20.0",
+    "@antfu/ni": "^0.21.2",
     "@antfu/utils": "^0.7.2",
     "@types/node": "^18.7.5",
     "@types/throttle-debounce": "^5.0.0",
