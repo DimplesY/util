@@ -1,4 +1,5 @@
 import { toTypeString } from './object'
+import type { Fn } from './types'
 
 /**
  * @category Is
@@ -37,7 +38,7 @@ export const isDate = (val: unknown): val is Date => toTypeString(val) === '[obj
  * @category Is
  *
  */
-export const isFunction = (val: unknown): val is Function => typeof val === 'function'
+export const isFunction = (val: unknown): val is Fn => typeof val === 'function'
 
 /**
  * @category Is

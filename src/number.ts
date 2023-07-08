@@ -4,8 +4,8 @@
  * 转为数字
  */
 export const toNumber = (val: any): any => {
-  const n = parseFloat(val)
-  return isNaN(n) ? val : n
+  const n = Number.parseFloat(val)
+  return Number.isNaN(n) ? val : n
 }
 
 /**
@@ -16,5 +16,5 @@ export const toNumber = (val: any): any => {
  */
 export const toFix = (value: string, n: number): string => {
   n = n || 2
-  return parseFloat(value).toFixed(n)
+  return Number.parseFloat(value).toFixed(n)
 }

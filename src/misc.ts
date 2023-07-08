@@ -1,9 +1,11 @@
+import type { Fn } from './types'
+
 /**
  * @category Misc
  *
  * 执行数组里的函数
  */
-export const invokeArrayFns = (fns: Function[], arg?: any) => {
+export const invokeArrayFns = (fns: Fn[], arg?: any) => {
   for (let i = 0; i < fns.length; i++)
     fns[i](arg)
 }
@@ -67,7 +69,7 @@ export function hideMobile(mobile: string) {
  *
  * 键值对拼接成URL参数
  */
-export const params2Url = (obj: Object) => {
+export const params2Url = (obj: Record<string, any>) => {
   const params = []
   for (const key in obj)
     params.push(`${key}=${obj[key]}`)

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { FormatType, formatDate, getDaysOfLastMonth, getDaysOfMonth, getFirstDayOfMonth, getLastDayOfMonth, getNow } from '../src/date'
+
+import { FormatType, formatDate, getDaysOfMonth, getFirstDayOfMonth, getLastDayOfMonth, getNow } from '../src/date'
 
 describe('date', () => {
   it('formatDate', () => {
