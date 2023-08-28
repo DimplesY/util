@@ -30,3 +30,7 @@ $ pnpm add @dimplesyj/util
 - vendor.ts - Vendor utils
 - version.ts - Version utils
 - types.ts - Types
+
+## Sponsors
+
+<a href="https://jetbrains.com"><img height="130" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="jetbrains"></a>
