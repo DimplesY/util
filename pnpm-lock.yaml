@@ -20,7 +20,7 @@ importers:
         version: 0.41.0(eslint@8.48.0)(typescript@5.2.2)
       '@antfu/ni':
         specifier: ^0.21.6
-        version: 0.21.6
+        version: 0.21.8
       '@antfu/utils':
         specifier: ^0.7.6
         version: 0.7.6
@@ -169,8 +169,8 @@ packages:
       - typescript
     dev: true
 
-  /@antfu/ni@0.21.6:
-    resolution: {integrity: sha512-Hj0BKIOspbo+OsPT5mjONeqpuVb4bxp9jdJ4p/b5GxgYNIqJjBcJdp0DEON7CJflKoWuHf7I52wO5kOJJ4DveQ==}
+  /@antfu/ni@0.21.8:
+    resolution: {integrity: sha512-90X8pU2szlvw0AJo9EZMbYc2eQKkmO7mAdC4tD4r5co2Mm56MT37MIG8EyB7p4WRheuzGxuLDxJ63mF6+Zajiw==}
     hasBin: true
     dev: true
 
