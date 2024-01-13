@@ -2,8 +2,8 @@
   "name": "@dimplesyj/util",
   "type": "module",
   "version": "1.0.9",
-  "packageManager": "pnpm@8.12.0",
-  "description": "",
+  "packageManager": "pnpm@8.14.1",
+  "description": "DimplesY's util package",
   "author": "Dimples YJ <dimplesyj@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/DimplesY",
@@ -56,18 +56,18 @@
     "throttle-debounce": "^5.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.4.5",
+    "@antfu/eslint-config": "^2.6.2",
     "@antfu/ni": "^0.21.12",
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.11.0",
     "@types/throttle-debounce": "^5.0.2",
     "bumpp": "^9.2.1",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "esno": "^4.0.0",
-    "pnpm": "^8.12.0",
+    "pnpm": "^8.14.1",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "unbuild": "^2.0.0",
-    "vite": "^5.0.8",
-    "vitest": "^1.0.4"
+    "vite": "^5.0.11",
+    "vitest": "^1.2.0"
   }
 }
