@@ -19,7 +19,7 @@ $ pnpm add @dimplesyj/util
 - color.ts - Color utils
 - date.ts - Date utils
 - img.ts - Image utils
-- is.ts - Type check utils  
+- is.ts - Type check utils
 - misc.ts - Misc utils
 - number.ts - Number utils
 - object.ts - Object utils

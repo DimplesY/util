@@ -6,7 +6,7 @@ export { throttle, debounce } from 'throttle-debounce'
  * @see https://github.com/scopsy/await-to-js/blob/master/src/await-to-js.ts
  *
  * @param { Readonly<Promise<T>> } promise
- * @param { Object } errorExt - Additional Information you can pass to the err object
+ * @param {object} errorExt - Additional Information you can pass to the err object
  * @return { Promise }
  */
 export function to<T, U = Error>(

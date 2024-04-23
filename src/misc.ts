@@ -5,7 +5,7 @@ import type { Fn } from './types'
  *
  * 执行数组里的函数
  */
-export const invokeArrayFns = (fns: Fn[], arg?: any) => {
+export function invokeArrayFns(fns: Fn[], arg?: any) {
   for (let i = 0; i < fns.length; i++)
     fns[i](arg)
 }
@@ -15,7 +15,7 @@ export const invokeArrayFns = (fns: Fn[], arg?: any) => {
  *
  * 字符串哈希
  */
-export const stringHash = (str: string): number => {
+export function stringHash(str: string): number {
   let hash = 5381
   let i = str.length
 
@@ -28,12 +28,11 @@ export const stringHash = (str: string): number => {
  *
  * uuid
  */
-export const uuid = (): string => {
+export function uuid(): string {
   return Array.from({ length: 16 }, () =>
     Math.floor(Math.random() * 256)
       .toString(16)
-      .padStart(2, '0'),
-  ).join('')
+      .padStart(2, '0')).join('')
 }
 
 // https://github.com/ai/nanoid/blob/main/non-secure/index.js
@@ -44,7 +43,7 @@ const urlAlphabet = 'useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwy
  *
  * nanoid
  */
-export const nanoid = (defaultSize = 21, alphabet = urlAlphabet) => {
+export function nanoid(defaultSize = 21, alphabet = urlAlphabet) {
   let id = ''
   // A compact alternative for `for (var i = 0; i < step; i++)`.
   let i = defaultSize
@@ -69,7 +68,7 @@ export function hideMobile(mobile: string) {
  *
  * 键值对拼接成URL参数
  */
-export const params2Url = (obj: Record<string, any>) => {
+export function params2Url(obj: Record<string, any>) {
   const params = []
   for (const key in obj)
     params.push(`${key}=${obj[key]}`)
@@ -82,7 +81,7 @@ export const params2Url = (obj: Record<string, any>) => {
  *
  * 将总秒数转换成 时:分:秒
  */
-export const seconds2Time = (seconds: number) => {
+export function seconds2Time(seconds: number) {
   const hour = Math.floor(seconds / 3600)
   const minute = Math.floor((seconds - hour * 3600) / 60)
   const second = seconds - hour * 3600 - minute * 60
@@ -94,7 +93,7 @@ export const seconds2Time = (seconds: number) => {
  *
  * 将总秒数转换成 日:时:分:秒
  */
-export const seconds2DayTime = (seconds: number) => {
+export function seconds2DayTime(seconds: number) {
   const day = Math.floor(seconds / 86400)
   const hour = Math.floor((seconds - day * 86400) / 3600)
   const minute = Math.floor((seconds - day * 86400 - hour * 3600) / 60)

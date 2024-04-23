@@ -6,7 +6,7 @@ const camelizeRE = /-(\w)/g
  * @param str - 字符串
  * @example user-info => userInfo
  */
-export const camelize = (str: string): string => {
+export function camelize(str: string): string {
   return str.replace(camelizeRE, (_, c) => (c ? c.toUpperCase() : ''))
 }
 
@@ -21,7 +21,7 @@ export const camelize = (str: string): string => {
  * @example Some label that needs to be pascalized => SomeLabelThatNeedsToBePascalized
  * @example some-mixed_string with spaces_underscores-and-hyphens => SomeMixedStringWithSpacesUnderscoresAndHyphens
  */
-export const toPascalCase = (str: string): string => {
+export function toPascalCase(str: string): string {
   return str
     .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
     .map(x => x.charAt(0).toUpperCase() + x.slice(1).toLowerCase())
@@ -37,7 +37,7 @@ export const toPascalCase = (str: string): string => {
  * @example hello_world => helloWorld
  * @example hello world => helloWorld
  */
-export const toCamelCase = (str: string) => {
+export function toCamelCase(str: string) {
   const s
     = str
     && str
@@ -57,12 +57,13 @@ export const toCamelCase = (str: string) => {
  * @example hello_world => hello-world
  * @example hello world => hello-world
  */
-export const toKebabCase = (str: string) =>
-  str
-  && str
-    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
-    .map(x => x.toLowerCase())
-    .join('-')
+export function toKebabCase(str: string) {
+  return str
+    && str
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
+      .map(x => x.toLowerCase())
+      .join('-')
+}
 
 /**
  * @category String
@@ -75,12 +76,13 @@ export const toKebabCase = (str: string) =>
  * @example hello_world => hello_world
  * @example hello world => hello_world
  */
-export const toSnakeCase = (str: string) =>
-  str
-  && str
-    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
-    .map(x => x.toLowerCase())
-    .join('_')
+export function toSnakeCase(str: string) {
+  return str
+    && str
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
+      .map(x => x.toLowerCase())
+      .join('_')
+}
 
 /**
  * @category String

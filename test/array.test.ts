@@ -27,8 +27,6 @@ describe('array', () => {
 
   it('all', () => {
     const arr: number[] = [1, 2, 3, 4]
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     expect(all(arr, x => x < 5)).toBe(true)
   })
 

@@ -3,7 +3,7 @@
  *
  * 转为数字
  */
-export const toNumber = (val: any): any => {
+export function toNumber(val: any): any {
   const n = Number.parseFloat(val)
   return Number.isNaN(n) ? val : n
 }
@@ -12,9 +12,8 @@ export const toNumber = (val: any): any => {
  * @category Number
  * 保留小数点后面n位数字,四舍五入
  *
- * @returns {string}
  */
-export const toFix = (value: string, n: number): string => {
+export function toFix(value: string, n: number): string {
   n = n || 2
   return Number.parseFloat(value).toFixed(n)
 }

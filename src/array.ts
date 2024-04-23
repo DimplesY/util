@@ -3,7 +3,7 @@
  *
  * @category Array
  */
-export const removeAt = <T>(arr: T[], el: T) => {
+export function removeAt<T>(arr: T[], el: T) {
   const i = arr.indexOf(el)
   if (i > -1)
     arr.splice(i, 1)
@@ -21,7 +21,7 @@ export const removeAt = <T>(arr: T[], el: T) => {
  * ```
  *
  */
-export const insertAt = <T>(arr: T[], index: number, ...v: T[]) => {
+export function insertAt<T>(arr: T[], index: number, ...v: T[]) {
   arr.splice(index + 1, 0, ...v)
   return arr
 }
@@ -57,7 +57,7 @@ export const lastN = <T>(arr: T[], n: number) => arr.slice(-n)
  *
  * @example all([4, 2, 3], x => x > 1) => true
  */
-export function all(arr: unknown[], fn = Boolean) {
+export function all<T = unknown>(arr: T[], fn: (value: T, index: number, array: T[]) => unknown) {
   return arr.every(fn)
 }
 

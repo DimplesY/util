@@ -56,7 +56,7 @@ export const isObject = (val: unknown): val is Record<any, any> => val !== null 
  * @category Is
  *
  */
-export const isPromise = <T = any>(val: unknown): val is Promise<T> => {
+export function isPromise<T = any>(val: unknown): val is Promise<T> {
   return isObject(val) && isFunction(val.then) && isFunction(val.catch)
 }
 
