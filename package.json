@@ -1,7 +1,7 @@
 {
   "name": "@dimplesyj/util",
   "type": "module",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "packageManager": "pnpm@9.1.2",
   "description": "DimplesY's util package",
   "author": "Dimples YJ <dimplesyj@gmail.com>",
@@ -46,7 +46,7 @@
     "dev": "unbuild --stub",
     "lint": "eslint . --fix",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
