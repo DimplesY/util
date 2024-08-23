@@ -23,7 +23,7 @@ export function camelize(str: string): string {
  */
 export function toPascalCase(str: string): string {
   return str
-    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
+    .match(/[A-Z]{2,}(?=[A-Z][a-z]+\d*|\b)|[A-Z]?[a-z]+\d*|[A-Z]|\d+/g)!
     .map(x => x.charAt(0).toUpperCase() + x.slice(1).toLowerCase())
     .join('')
 }
@@ -41,7 +41,7 @@ export function toCamelCase(str: string) {
   const s
     = str
     && str
-      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+\d*|\b)|[A-Z]?[a-z]+\d*|[A-Z]|\d+/g)!
       .map(x => x.slice(0, 1).toUpperCase() + x.slice(1).toLowerCase())
       .join('')
   return s.slice(0, 1).toLowerCase() + s.slice(1)
@@ -60,7 +60,7 @@ export function toCamelCase(str: string) {
 export function toKebabCase(str: string) {
   return str
     && str
-      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+\d*|\b)|[A-Z]?[a-z]+\d*|[A-Z]|\d+/g)!
       .map(x => x.toLowerCase())
       .join('-')
 }
@@ -79,7 +79,7 @@ export function toKebabCase(str: string) {
 export function toSnakeCase(str: string) {
   return str
     && str
-      .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)!
+      .match(/[A-Z]{2,}(?=[A-Z][a-z]+\d*|\b)|[A-Z]?[a-z]+\d*|[A-Z]|\d+/g)!
       .map(x => x.toLowerCase())
       .join('_')
 }
