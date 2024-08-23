@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { all, allEqual, insertAt, last, lastN, removeAt } from '../src/array'
+import { all, allEqual, emptyArray, insertAt, last, lastN, removeAt } from '../src/array'
 
 describe('array', () => {
   it('removeAt', () => {
@@ -35,5 +35,9 @@ describe('array', () => {
     const arr2: number[] = [1, 2, 3, 4]
     expect(allEqual(arr1)).toBe(true)
     expect(allEqual(arr2)).toBe(false)
+  })
+
+  it('emptyArray', () => {
+    expect(emptyArray<number>(10).every(Boolean)).toBe(false)
   })
 })

@@ -75,3 +75,13 @@ export function all<T = unknown>(arr: T[], fn: (value: T, index: number, array: 
 export function allEqual(arr: unknown[]) {
   return arr.every(val => val === arr[0])
 }
+
+/**
+ * Create empty array
+ *
+ * @param capacity
+ * @returns
+ */
+export function emptyArray<T>(cap: number): T[] {
+  return Array.from({ length: cap })
+}
