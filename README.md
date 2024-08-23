@@ -33,4 +33,4 @@ $ pnpm add @dimplesyj/util
 
 ## Sponsors
 
-<a href="https://jetbrains.com"><img height="130" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="jetbrains"></a>
+<a href="https://jetbrains.com"><img height="130" src="https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg" alt="jetbrains"></a>

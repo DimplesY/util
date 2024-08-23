@@ -3,6 +3,6 @@ import { compareVersion } from '../src/version'
 
 describe('version', () => {
   it('compareVersion', () => {
-    expect(compareVersion('1.0.0', '1.0.0')).toBe(0)
+    expect(compareVersion('1.2.0', '1.11.0')).toBe(-1)
   })
 })
