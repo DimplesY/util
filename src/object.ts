@@ -16,7 +16,7 @@ export function clone(obj: object): object {
  */
 export function clearNull(obj: any): any {
   if (typeof obj === 'object') {
-    const result = clone(obj)
+    const result = clone(obj) as Record<string, any>
 
     for (const key in result) {
       const current = result[key]
