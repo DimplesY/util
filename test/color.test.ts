@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { hexToRGB, rgbToHex, toHex } from '../src'
 
 describe('color', () => {
